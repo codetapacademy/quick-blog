@@ -1,1 +1,9 @@
-h1 this is my first blog title!!!!
+extend _component/layout/base
+
+block config
+    -
+        var title = '!Welcome to Quick Blog'
+        var description = 'Using super Quick Blog is easy and you can get 100/100 score on Google pagespeed insights'
+block content
+    h1=title
+    p=description
