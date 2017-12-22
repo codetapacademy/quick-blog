@@ -1,0 +1,35 @@
+// Quick CSS reset
+
+html,
+body {
+    height: 100%;
+}
+
+.welcome {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    background-image: radial-gradient(ellipse, $color-buttercup, $color-golden-grass);
+
+    h1 {
+        color: $color-white;
+        // font-size: 3.8125rem;
+        font-size: 2rem;
+    }
+
+    a {
+        color: $color-white;
+        text-decoration: none;
+        font-size: 1.05rem;
+    }
+}
+
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     box-sizing: border-box;
+// }
