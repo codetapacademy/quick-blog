@@ -2,13 +2,13 @@ extend _component/layout/base
 
 block config
     -
-        var title = '!Welcome to Quick Blog'
+        var title = 'Welcome to Quick Blog'
         var description = 'Using super Quick Blog is easy and you can get 100/100 score on Google pagespeed insights'
 block content
     .welcome
         h1=title
-        p=description
-        a(href="#continue") click to continue reading or scroll down
+        p.welcome__description=description
+        a.scroll-down(href="#continue") click to continue reading or scroll down
     #continue
     p.lead Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
     p
