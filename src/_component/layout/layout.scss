@@ -6,6 +6,9 @@ body {
     font-family: 'Open Sans'
 }
 
+html {
+    font-size: 10px;
+}
 @media screen and (min-width: 25em){
     html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
 }
@@ -16,7 +19,7 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-image: radial-gradient(ellipse, $color-buttercup, $color-golden-grass);
+    background-image: radial-gradient(ellipse, $color-normal, $color-dark);
 
     h1 {
         color: $color-white;
@@ -39,17 +42,23 @@ body {
         margin: 1rem;
         border: 0.1rem solid $color-white;
         position: relative;
-        background-color: $color-buttercup1;
-        padding-right: 1.5rem;
+        background-color: $color-dark;
+        padding-right: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
-            border: 0.1rem solid $color-buttercup;
+            border: 0.1rem solid $color-normal;
         }
-
+    }
+    
+    .continue-arrow {
+        margin: 0 0.2rem;
         &:after {
             position: absolute;
-            right: 0.5rem;
-            top: 1.2rem;
+            // right: 0.5rem;
+            // top: 1.2rem;
             content: '';
             display: block;
             width: 0px;

@@ -1,0 +1,32 @@
+.menu {
+    padding: 0.5rem;
+}
+
+.menu__panel {
+}
+
+.menu__title {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: $color-normal;
+    color: $color-white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.menu__list {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: $color-dark;
+    color: $color-white;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+    a {
+        color: $color-white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+}
