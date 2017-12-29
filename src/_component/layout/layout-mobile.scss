@@ -1,0 +1,82 @@
+// Quick CSS reset
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans'
+}
+
+html {
+    font-size: 10px;
+}
+@media screen and (min-width: 25em){
+    html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+}
+.welcome {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(ellipse, $color-normal, $color-dark);
+
+    h1 {
+        color: $color-white;
+        font-weight: bold;
+        // font-size: 3.8125rem;
+        font-size: 4rem;
+    }
+
+    .welcome__description {
+        line-height: 1.5;
+        padding: 0 0.5rem;
+        font-size: 2rem;
+        text-align: justify;
+        padding: 2rem;
+    }
+
+    a.scroll-down {
+        color: $color-white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        margin: 1rem;
+        border: 0.1rem solid $color-white;
+        position: relative;
+        background-color: $color-dark;
+        padding-right: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            border: 0.1rem solid $color-normal;
+        }
+    }
+    
+    .continue-arrow {
+        margin: 0 0.2rem;
+        &:after {
+            position: absolute;
+            // right: 0.5rem;
+            // top: 1.2rem;
+            content: '';
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-top: 0.4rem solid $color-white;
+            border-left: 0.4rem solid transparent;
+            border-right: 0.4rem solid transparent;
+        }
+    }
+}
+
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     box-sizing: border-box;
+// }
