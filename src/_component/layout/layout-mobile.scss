@@ -73,6 +73,58 @@ html {
     }
 }
 
+.top {
+    text-align: right;
+    display: block;
+}
+
+.top-arrow {
+    margin: 0 0.2rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        // right: 0.5rem;
+        top: 0.5rem;
+        content: '';
+        // display: block;
+        width: 0px;
+        height: 0px;
+        border-bottom: 0.4rem solid $color-dark;
+        border-left: 0.4rem solid transparent;
+        border-right: 0.4rem solid transparent;
+    }
+}
+
+a {
+    color: $color-dark;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.content {
+    padding: 1.5rem;
+
+    h2 {
+        font-size: 3rem;
+        color: $color-dark;
+        font-weight: bold;
+        padding: 1rem 0;
+        line-height: 1.3;
+    }
+
+    blockquote {
+        border-left: 0.2rem solid $color-athens-gray;
+        padding-left: 1rem;
+        margin: 1rem 0;
+    }
+
+    .blockquote-footer {
+        margin: 0.5rem 0;
+    }
+}
 
 // * {
 //     margin: 0;
