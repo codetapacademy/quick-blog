@@ -13,7 +13,7 @@ html {
     html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
 }
 .welcome {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -26,6 +26,7 @@ html {
         font-weight: bold;
         // font-size: 3.8125rem;
         font-size: 4rem;
+        margin: 1rem;
     }
 
     .welcome__description {
