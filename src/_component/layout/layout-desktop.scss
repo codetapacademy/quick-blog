@@ -13,4 +13,20 @@
     footer {
         grid-column: 1/3;
     }
+
+    .welcome {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .welcome__description {
+            font-size: 1.4rem;
+        }
+    }
+
+    .content {
+        h2 {
+            font-size: 2rem;
+        }
+    }
 }
