@@ -1,0 +1,12 @@
+.article {
+    padding: 1rem;
+
+    &:nth-child(odd) {
+        background-color: $color-athens-gray;
+    }
+    
+    &-link {
+        text-align: right;
+    }
+}
+

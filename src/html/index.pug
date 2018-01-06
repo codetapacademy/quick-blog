@@ -1,0 +1,11 @@
+extend ../_component/layout/base
+block config
+    -
+        var title = 'HTML5 introduction';
+        var description = 'Discover HTML for beginners';
+block content
+    .content
+        h2 Read more to find out how cool HTML really is
+        .list-wrapper
+            each article in data['html-is-cool']
+                include ../_component/article/article
