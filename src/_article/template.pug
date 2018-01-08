@@ -1,0 +1,45 @@
+extends ../_component/layout/base
+
+block config
+    - 
+        var title = template.head.title || 'Change me, title'
+        var description = template.head.description || 'Change me, I\'m the description'
+block content
+    .content
+        each something in template.body
+            if something.type == 'blockquote'
+                blockquote.blockquote
+                    .blockquote__body
+                        each paragraph in something.data
+                            p=paragraph
+                    .blockquote-footer
+                        a(href=something.link, target="_blank")=something.source
+
+            if something.type == 'pre'
+                h3.pre-title=something.title
+                each dataValue in something.data
+                    pre=dataValue
+
+            if something.type == 'ul'
+                ul
+                    each listItem in something.data
+                        li=listItem
+                    
+            if something.type == 'h3'
+                h3=something.data
+
+            if something.type == "h2"
+                h2=something.data
+            if something.type == "paragraph" ||  something.type == "p"
+                each paragraph in something.data
+                    p=paragraph
+            if something.type == "paragraph-safe"
+                each paragraph in something.data
+                    p!=paragraph
+
+            if something.type == 'hr'
+                hr
+            if something.type == 'img'
+                img(src=something.src)
+        //- pre=JSON.stringify(template.head, null, 4)
+        //- pre=JSON.stringify(template.body, null, 4)

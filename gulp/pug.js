@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { getJsonData, printError } from './util/util';
+import { getJsonData, printError, fixWindows10GulpPathIssue } from './util/util';
 
 const pug = ({
   gulp,
@@ -27,6 +27,7 @@ const pug = ({
         // Ignore files and folders that start with "_"
         '!' + path.join(dir.source, '{**/\_*,**/\_*/**}')
       ])
+      // .pipe(plugins.debug())
       // Only deal with files that change in the pipeline
       .pipe(plugins.if(
         config.render.sourceFileChange,
@@ -65,8 +66,12 @@ const pug = ({
           rootpath: path.join(__dirname, '..')
         })
       ))
+      // Fix for Windows 10 and gulp acting crazy
+      .pipe(plugins.rename(file => {
+        const dest = taskTarget;
+        fixWindows10GulpPathIssue({file, dest, plugins, config});
+      }))
       .pipe(gulp.dest(path.join(taskTarget)))
-      // .on('end', browserSync.reload);
       .on('end', () => {
         reload && browserSync.reload();
       });

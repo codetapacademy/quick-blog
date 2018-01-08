@@ -2,6 +2,7 @@
 
 import path from 'path';
 import gulpConfig from './util/config';
+import { fixWindows10GulpPathIssue } from './util/util';
 
 const font = ({
   gulp,
@@ -21,6 +22,13 @@ const font = ({
         gulpConfig.fileExpression.font
       ))
       .pipe(plugins.changed(dest))
+      // .pipe(plugins.debug())
+
+      // Fix for Windows 10 and gulp acting crazy
+      .pipe(plugins.rename(file => {
+        fixWindows10GulpPathIssue({file, dest, plugins, config})
+      }))
+      // .pipe(plugins.debug())
       .pipe(gulp.dest(dest));
   });
 };
