@@ -4,7 +4,6 @@ html
     head
         title=title
         meta(name="description", content=description)
-        link(rel="stylesheet", href="/style.css")
         if config.entry.css.inline
         link(rel="stylesheet", href=`${inlinePath}`, inline)
         //- link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
@@ -14,3 +13,4 @@ html
             block content
             include ../menu/menu
             include ../footer/footer
+link(rel="stylesheet", href="/style.css")
