@@ -40,7 +40,8 @@
       "cssExternal": "style**.{scss,sass}",
       "cssInline": "inline**.{scss,sass}",
       "css": {
-        "inline": false,
+        "//": "the inline is meant to be embed",
+        "inline": true,
         "external": true
       }
     }
