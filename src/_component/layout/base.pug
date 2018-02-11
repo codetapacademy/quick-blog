@@ -1,6 +1,8 @@
 doctype html
 html
     block config
+    -
+        var baseUrl = taskTarget === 'tmp' ? '/' : '/quick-blog/'
     head
         title=title
         meta(name="description", content=description)
@@ -13,4 +15,4 @@ html
             block content
             include ../menu/menu
             include ../footer/footer
-link(rel="stylesheet", href="/style.css")
+link(rel="stylesheet", href=`${baseUrl}style.css`)
